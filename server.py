@@ -2,7 +2,6 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-# Global variables to store heights
 heimdall_height = 0
 bor_height = 0
 
