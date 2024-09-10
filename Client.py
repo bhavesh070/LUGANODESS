@@ -4,11 +4,8 @@ import json
 from telegram import Bot
 import asyncio
 
-HEIMDALL_API = "https://heimdall-api-amoy.polygon.technology/checkpoints/latest"  # Example API endpoint
-# BOR_API = "http://localhost:1317/bor/latest-span"            # Example API endpoint
+HEIMDALL_API = "https://heimdall-api-amoy.polygon.technology/checkpoints/latest"  
 
-# telegram_bot_token = "7123503158:AAEp78SxtjpCQplPRmz9zjN3_aMcu7qHh78"
-# telegram_chat_id = "https://api.telegram.org/bot7123503158:AAEp78SxtjpCQplPRmz9zjN3_aMcu7qHh78/getUpdates"
 with open('config.json') as f:
     config = json.load(f)
 
@@ -23,7 +20,7 @@ def fetch_block_height(api):
         return None
 
 def send_alert(message):
-    # Function to send alert via Telegram
+   
     try:
         bot = Bot(token=config['telegram_bot_token'])
         asyncio.run(bot.send_message(chat_id=config['telegram_chat_id2'], text=message))
@@ -39,12 +36,11 @@ def main():
         if heimdall_height is not None and bor_height is not None:
             print(f"Heimdall Height: {heimdall_height}, Bor Height: {bor_height}")
 
-            # Alert if heights are out of sync
             if heimdall_height != bor_height:
                 send_alert("Alert")
-                # Trigger alerting mechanism here
+                
 
-        time.sleep(10)  # Polling interval
+        time.sleep(10) 
 
 if __name__ == "__main__":
     main()
