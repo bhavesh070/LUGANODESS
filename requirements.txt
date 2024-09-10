@@ -1,0 +1,4 @@
+flask
+requests
+telegram
+python-telegram-bot==13.14  # Use the specific version compatible with your code

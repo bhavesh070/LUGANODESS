@@ -1,0 +1,10 @@
+{
+    "validator_address": "0x1efecb61a2f80aa34d3b9218b564a64d05946290",
+    "rpc_endpoint": 	"https://polygon-rpc.com/",
+    "telegram_bot_token": "6985927308:AAEHktO-l4ajCN6Vue37P5ZZLwfIBJPTVLA",
+    "telegram_chat_id": "https://api.telegram.org/bot6985927308:AAEHktO-l4ajCN6Vue37P5ZZLwfIBJPTVLA/getUpdates",
+    "telegram_chat_id2": "https://api.telegram.org/bot6985927308:AAEHktO-l4ajCN6Vue37P5ZZLwfIBJPTVLA/sendMessage?chat_id=-6985927308&text=123"
+
+
+  }
+  
